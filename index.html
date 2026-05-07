@@ -1448,6 +1448,9 @@ function saveConfig() {
 // RENDER DAY CARDS
 // ============================================================
 const SECTION_META = {
+  main:           { label:'Main',            color:'var(--tag-main)' },
+  leg:            { label:'Leg',             color:'var(--tag-leg)' },
+  prehab:         { label:'Prehab',          color:'var(--accent2)' },
   chest:           { label:'Chest',           color:'var(--tag-main)' },
   shoulder:        { label:'Shoulder',        color:'var(--tag-main)' },
   tricep:          { label:'Tricep',          color:'var(--tag-main)' },
@@ -1472,6 +1475,9 @@ function renderDays() {
 
   program.forEach((day, di) => {
     const sectionOrder = [
+      'main',
+      'leg',
+      'prehab',
       'chest',
       'shoulder',
       'tricep',
